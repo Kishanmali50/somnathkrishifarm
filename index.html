@@ -409,7 +409,7 @@ table { max-width: 100%; }
   <div class="hero-content reveal show">
     <div class="eyebrow">Dantiwada · Gujarat</div>
     <h1>Nature's <em>golden</em> harvest.</h1>
-    <p>Premium Kesar mangoes, grown with patience, care and the character of our orchard — from Somnath Krishi Farm to your table.</p>
+    <p>Premium Kesar mangoes, grown with patience, care and the character of our orchard — from Somnath Krishi Farm to your dine-in table.</p>
     <div class="actions">
       <a class="btn btn-gold" href="https://wa.me/919558328759?text=Hello%20Somnath%20Krishi%20Farm,%20I%20would%20like%20to%20know%20about%20your%20mangoes.">Enquire on WhatsApp</a>
       <a class="btn btn-glass" href="#products">Explore the harvest</a>
@@ -434,7 +434,7 @@ table { max-width: 100%; }
       <p class="section-intro">A founder's path that traded the classroom for the orchard — and never looked back.</p>
     </div>
     <div class="story-card reveal">
-      <div class="founder-badge"><span class="dot"></span>Founder — Kishan Mali</div>
+      <div class="founder-badge"><span class="dot"></span> co-Founder — Kishan Mali</div>
       <p>My name is <strong>Kishan Mali</strong>, and my path into farming was anything but conventional.</p>
       <p>I began a <strong>B.Tech in Food Technology at Sardarkrushinagar Dantiwada Agricultural University</strong> — but somewhere between the lecture halls and the fields around campus, I realised the classroom could teach me the theory of food and soil, while the orchard could teach me the practice. So I stepped away from the degree and stepped into the land instead, carrying that scientific curiosity about crops and quality straight into the orchard.</p>
       <p>The road since has brought its own lessons — every season teaching patience, precision and a deeper respect for the fruit itself.</p>
@@ -638,6 +638,433 @@ table { max-width: 100%; }
   }
   }catch(e){ /* never let a decorative feature break the page */ }
 })();
+</script> 
+  <!-- ================= FOUNDER SECTION ================= -->
+
+<style>
+  .founder-section {
+    padding: 90px 20px;
+    background: linear-gradient(180deg, #f7f4ec 0%, #ffffff 100%);
+    color: #182018;
+    font-family: inherit;
+  }
+
+  .founder-container {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+
+  .founder-label {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 1px solid #b99352;
+    border-radius: 50px;
+    color: #8a672b;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .founder-heading {
+    max-width: 850px;
+    margin: 18px 0 15px;
+    font-size: clamp(36px, 5vw, 62px);
+    line-height: 1.05;
+    font-weight: 800;
+  }
+
+  .founder-intro {
+    max-width: 760px;
+    margin-bottom: 50px;
+    color: #626962;
+    font-size: 18px;
+    line-height: 1.8;
+  }
+
+  .founder-layout {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 28px;
+    align-items: stretch;
+  }
+
+  .founder-main-card {
+    background: #ffffff;
+    border-radius: 28px;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.08);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.10);
+  }
+
+  .founder-main-photo {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    display: block;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+  }
+
+  .founder-main-photo:hover {
+    transform: scale(1.02);
+  }
+
+  .founder-content {
+    padding: 34px;
+  }
+
+  .founder-role {
+    color: #a0772d;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .founder-name {
+    margin: 10px 0 15px;
+    font-size: clamp(30px, 4vw, 44px);
+    line-height: 1.1;
+  }
+
+  .founder-description {
+    color: #606860;
+    font-size: 16px;
+    line-height: 1.85;
+    margin-bottom: 15px;
+  }
+
+  .founder-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+
+  .founder-gallery-item {
+    border: 0;
+    padding: 0;
+    background: none;
+    overflow: hidden;
+    border-radius: 22px;
+    cursor: pointer;
+    min-width: 0;
+  }
+
+  .founder-gallery-item img {
+    width: 100%;
+    height: 100%;
+    min-height: 210px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  .founder-gallery-item:hover img {
+    transform: scale(1.06);
+  }
+
+  .founder-legacy {
+    margin-top: 30px;
+    padding: 25px 30px;
+    background: #f3eee2;
+    border-left: 4px solid #b99352;
+    border-radius: 0 18px 18px 0;
+    color: #535b53;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .founder-legacy strong {
+    color: #2d382d;
+  }
+
+  /* Full screen photo viewer */
+
+  .founder-lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.92);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 999999;
+  }
+
+  .founder-lightbox.active {
+    display: flex;
+  }
+
+  .founder-lightbox img {
+    max-width: 95vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 12px;
+  }
+
+  .founder-close {
+    position: fixed;
+    top: 20px;
+    right: 25px;
+    width: 46px;
+    height: 46px;
+    border: 0;
+    border-radius: 50%;
+    background: white;
+    color: #111;
+    font-size: 28px;
+    cursor: pointer;
+  }
+
+  @media (max-width: 800px) {
+
+    .founder-section {
+      padding: 60px 16px;
+    }
+
+    .founder-layout {
+      grid-template-columns: 1fr;
+    }
+
+    .founder-intro {
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+
+    .founder-content {
+      padding: 25px;
+    }
+
+    .founder-gallery-item img {
+      min-height: 160px;
+    }
+  }
+
+  @media (max-width: 480px) {
+
+    .founder-heading {
+      font-size: 36px;
+    }
+
+    .founder-gallery {
+      gap: 10px;
+    }
+
+    .founder-gallery-item {
+      border-radius: 16px;
+    }
+
+    .founder-gallery-item img {
+      min-height: 135px;
+    }
+
+    .founder-legacy {
+      padding: 20px;
+    }
+  }
+</style>
+
+
+<section class="founder-section" id="founder">
+
+  <div class="founder-container">
+
+    <span class="founder-label">
+      Our Founder
+    </span>
+
+    <h2 class="founder-heading">
+      The Vision Behind Somnath Krishi Farm
+    </h2>
+
+    <p class="founder-intro">
+      A journey rooted in agriculture, dedication and a deep connection
+      with the land. These photographs preserve memorable moments from
+      the journey and heritage of Somnath Krishi Farm.
+    </p>
+
+
+    <div class="founder-layout">
+
+
+      <!-- MAIN FOUNDER CARD -->
+
+      <div class="founder-main-card">
+
+        <img
+          src="founder-1.jpg"
+          alt="Founder Nagjiji Danaji Mali"
+          class="founder-main-photo"
+          onclick="openFounderPhoto('founder-1.jpg')"
+        >
+
+        <div class="founder-content">
+
+          <div class="founder-role">
+            Founder & Visionary
+          </div>
+
+          <h3 class="founder-name">
+            Nagjiji Danaji Mali
+          </h3>
+
+          <p class="founder-description">
+            <strong>Nagjiji Danaji Mali</strong> is the founder of
+            Somnath Krishi Farm. His journey is deeply connected with
+            agriculture, farming and the land that has been an important
+            part of his life.
+          </p>
+
+          <p class="founder-description">
+            These photographs are a part of that journey and preserve
+            important memories, occasions and moments connected with
+            the agricultural legacy of Somnath Krishi Farm.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- PHOTO GALLERY -->
+
+      <div class="founder-gallery">
+
+        <button
+          class="founder-gallery-item"
+          onclick="openFounderPhoto('founder-2.jpg')"
+        >
+          <img
+            src="founder-2.jpg"
+            alt="Nagjiji Danaji Mali"
+            loading="lazy"
+          >
+        </button>
+
+
+        <button
+          class="founder-gallery-item"
+          onclick="openFounderPhoto('founder-3.jpg')"
+        >
+          <img
+            src="founder-3.jpg"
+            alt="Agricultural journey of Somnath Krishi Farm"
+            loading="lazy"
+          >
+        </button>
+
+
+        <button
+          class="founder-gallery-item"
+          onclick="openFounderPhoto('founder-4.jpg')"
+        >
+          <img
+            src="founder-4.jpg"
+            alt="Founder and family photograph"
+            loading="lazy"
+          >
+        </button>
+
+
+        <button
+          class="founder-gallery-item"
+          onclick="openFounderPhoto('founder-1.jpg')"
+        >
+          <img
+            src="founder-1.jpg"
+            alt="Founder event photograph"
+            loading="lazy"
+          >
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- LEGACY MESSAGE -->
+
+    <div class="founder-legacy">
+
+      <strong>A Legacy Worth Preserving</strong><br>
+
+      The photographs displayed here capture special moments from the
+      journey of our founder, <strong>Nagjiji Danaji Mali</strong>, and
+      preserve a part of the history and heritage behind
+      Somnath Krishi Farm.
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FULL SCREEN PHOTO VIEWER -->
+
+<div
+  class="founder-lightbox"
+  id="founderLightbox"
+  onclick="closeFounderPhoto()"
+>
+
+  <button
+    class="founder-close"
+    onclick="event.stopPropagation(); closeFounderPhoto()"
+  >
+    ×
+  </button>
+
+  <img
+    id="founderLightboxImage"
+    src=""
+    alt="Founder photograph"
+    onclick="event.stopPropagation()"
+  >
+
+</div>
+
+
+<script>
+
+function openFounderPhoto(image) {
+
+  document.getElementById("founderLightboxImage").src = image;
+
+  document
+    .getElementById("founderLightbox")
+    .classList.add("active");
+
+  document.body.style.overflow = "hidden";
+}
+
+
+function closeFounderPhoto() {
+
+  document
+    .getElementById("founderLightbox")
+    .classList.remove("active");
+
+  document.getElementById("founderLightboxImage").src = "";
+
+  document.body.style.overflow = "";
+
+}
+
+
+document.addEventListener("keydown", function(event) {
+
+  if (event.key === "Escape") {
+
+    closeFounderPhoto();
+
+  }
+
+});
+
 </script>
+
+<!-- ================= END FOUNDER SECTION ================= -->
 </body>
 </html>
