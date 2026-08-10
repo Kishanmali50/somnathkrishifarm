@@ -425,6 +425,335 @@ table { max-width: 100%; }
     <div class="stat"><strong>100%</strong><span>Farm Fresh Focus</span></div>
   </div>
 </section>
+  <!-- ================= HISTORICAL MOMENTS ================= -->
+
+<style>
+  .history-section {
+    padding: 85px 20px;
+    background: linear-gradient(180deg, #fffdf8 0%, #f4efe3 100%);
+  }
+
+  .history-container {
+    max-width: 1180px;
+    margin: auto;
+  }
+
+  .history-heading {
+    text-align: center;
+    margin-bottom: 55px;
+  }
+
+  .history-label {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 1px solid #b99352;
+    border-radius: 50px;
+    color: #8b692d;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .history-title {
+    margin: 18px 0 12px;
+    font-size: clamp(34px, 5vw, 58px);
+    line-height: 1.05;
+    color: #202820;
+  }
+
+  .history-subtitle {
+    max-width: 720px;
+    margin: auto;
+    color: #656b64;
+    font-size: 17px;
+    line-height: 1.8;
+  }
+
+  .history-card {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 0;
+    background: #fff;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-bottom: 38px;
+    box-shadow: 0 20px 60px rgba(40, 35, 20, 0.12);
+    border: 1px solid rgba(120, 90, 40, 0.12);
+  }
+
+  .history-card.reverse {
+    grid-template-columns: 0.85fr 1.15fr;
+  }
+
+  .history-image {
+    position: relative;
+    min-height: 420px;
+    overflow: hidden;
+  }
+
+  .history-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+  }
+
+  .history-image:hover img {
+    transform: scale(1.04);
+  }
+
+  .history-content {
+    padding: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .history-year {
+    color: #a17931;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+  }
+
+  .history-card-title {
+    margin: 0 0 20px;
+    font-size: 30px;
+    line-height: 1.2;
+    color: #202820;
+  }
+
+  .history-gujarati {
+    font-family: "Noto Sans Gujarati", "Nirmala UI", sans-serif;
+    font-size: 19px;
+    line-height: 2;
+    color: #4e554e;
+    margin: 0;
+  }
+
+  .history-divider {
+    width: 65px;
+    height: 3px;
+    background: #b99352;
+    margin: 0 0 25px;
+  }
+
+  @media (max-width: 800px) {
+
+    .history-section {
+      padding: 60px 16px;
+    }
+
+    .history-card,
+    .history-card.reverse {
+      grid-template-columns: 1fr;
+    }
+
+    .history-image,
+    .history-image img {
+      min-height: 280px;
+      height: 280px;
+    }
+
+    .history-content {
+      padding: 28px 23px;
+    }
+
+    .history-gujarati {
+      font-size: 17px;
+      line-height: 1.9;
+    }
+
+    .history-card-title {
+      font-size: 26px;
+    }
+  }
+</style>
+
+
+<section class="history-section">
+
+  <div class="history-container">
+
+    <div class="history-heading">
+
+      <span class="history-label">
+        Historical Moments
+      </span>
+
+      <h2 class="history-title">
+        A Journey Rooted in Agriculture
+      </h2>
+
+      <p class="history-subtitle">
+        Memorable moments from the agricultural journey and the legacy
+        connected with Somnath Krishi Farm.
+      </p>
+
+    </div>
+
+
+    <!-- FIRST HISTORICAL PHOTO -->
+
+    <article class="history-card">
+
+      <div class="history-image">
+
+        <img
+          src="founder-3jpg.jpeg"
+          alt="Historical agricultural visit at Somnath Krishi Farm"
+          onclick="openHistoryPhoto(this.src)"
+          loading="lazy"
+        >
+
+      </div>
+
+      <div class="history-content">
+
+        <div class="history-year">
+          HISTORICAL VISIT
+        </div>
+
+        <div class="history-divider"></div>
+
+        <h3 class="history-card-title">
+          Somnath Krishi Farm
+        </h3>
+
+        <p class="history-gujarati">
+          કલેક્ટર શ્રી આર. જે. પટેલ સાહેબ તથા ડેપ્યુટી કલેક્ટર
+          શ્રી ગુરચિયા સાહેબ, મામલતદાર સાહેબ તથા તા. વિ. અધિકારી
+          શ્રી નાગજીભાઈ ના સોમનાથ કૃષિ ફાર્મ ની તા. ૧૩/૦૭/૨૦૧૦
+          ના રોજ મુલાકાત લીધી.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- SECOND HISTORICAL PHOTO -->
+
+    <article class="history-card reverse">
+
+      <div class="history-content">
+
+        <div class="history-year">
+          FARM & COMMUNITY
+        </div>
+
+        <div class="history-divider"></div>
+
+        <h3 class="history-card-title">
+          A Memorable Chapter
+        </h3>
+
+        <p class="history-gujarati">
+          સોમનાથ કૃષિ ફાર્મ સાથે જોડાયેલી આ યાદગાર ક્ષણો
+          અમારા કૃષિ પ્રવાસ અને વારસાની મહત્વપૂર્ણ યાદોને
+          સાચવી રાખે છે.
+        </p>
+
+      </div>
+
+      <div class="history-image">
+
+        <img
+          src="founder-4jpg.jpeg"
+          alt="Historical photograph connected with Somnath Krishi Farm"
+          onclick="openHistoryPhoto(this.src)"
+          loading="lazy"
+        >
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- FULL SCREEN IMAGE VIEWER -->
+
+<div
+  id="historyLightbox"
+  style="
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.92);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    z-index:999999;
+    padding:20px;
+  "
+  onclick="closeHistoryPhoto()"
+>
+
+  <button
+    onclick="event.stopPropagation();closeHistoryPhoto()"
+    style="
+      position:fixed;
+      top:20px;
+      right:25px;
+      width:46px;
+      height:46px;
+      border:0;
+      border-radius:50%;
+      background:white;
+      color:#111;
+      font-size:28px;
+      cursor:pointer;
+    "
+  >×</button>
+
+  <img
+    id="historyLightboxImage"
+    src=""
+    alt="Historical photograph"
+    style="
+      max-width:95vw;
+      max-height:90vh;
+      object-fit:contain;
+      border-radius:15px;
+    "
+    onclick="event.stopPropagation()"
+  >
+
+</div>
+
+
+<script>
+
+function openHistoryPhoto(src) {
+
+  document.getElementById("historyLightboxImage").src = src;
+
+  document.getElementById("historyLightbox").style.display = "flex";
+
+  document.body.style.overflow = "hidden";
+}
+
+
+function closeHistoryPhoto() {
+
+  document.getElementById("historyLightbox").style.display = "none";
+
+  document.getElementById("historyLightboxImage").src = "";
+
+  document.body.style.overflow = "";
+
+}
+
+</script>
+
+<!-- ================= END HISTORICAL MOMENTS ================= -->
    <!-- ================= FOUNDER SECTION ================= -->
 
 <style>
