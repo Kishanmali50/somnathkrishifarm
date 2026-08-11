@@ -1196,6 +1196,200 @@ document.addEventListener("keydown", function(event) {
       <p>The road since has brought its own lessons — every season teaching patience, precision and a deeper respect for the fruit itself.</p>
       <div class="quote">"Success is not about how fast you grow. It's about how much you learn while growing."</div>
       <p>Today, that purpose goes beyond cultivation — it's about building a farm rooted in quality, knowledge and a mindset that keeps growing.</p>
+      <!-- CO-FOUNDER PREMIUM PHOTO GALLERY -->
+
+<style>
+  .cofounder-gallery {
+    max-width: 1200px;
+    margin: 55px auto 20px;
+    padding: 0 20px;
+  }
+
+  .cofounder-gallery-heading {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  .cofounder-gallery-heading span {
+    display: inline-block;
+    padding: 7px 16px;
+    border: 1px solid #c29a52;
+    border-radius: 50px;
+    color: #98702f;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .cofounder-gallery-heading h3 {
+    margin: 14px 0 8px;
+    font-size: clamp(26px, 4vw, 40px);
+    color: #202820;
+  }
+
+  .cofounder-gallery-heading p {
+    margin: 0 auto;
+    max-width: 650px;
+    color: #6b706b;
+    line-height: 1.7;
+    font-size: 15px;
+  }
+
+  .cofounder-photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+
+  .cofounder-photo-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    background: #fff;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.13);
+    border: 1px solid rgba(150, 120, 60, 0.15);
+  }
+
+  .cofounder-photo-card img {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+    cursor: pointer;
+  }
+
+  .cofounder-photo-card:hover img {
+    transform: scale(1.06);
+  }
+
+  .cofounder-photo-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 45px 20px 20px;
+    background: linear-gradient(
+      transparent,
+      rgba(0, 0, 0, 0.75)
+    );
+    color: white;
+    pointer-events: none;
+  }
+
+  .cofounder-photo-overlay strong {
+    display: block;
+    font-size: 17px;
+    margin-bottom: 4px;
+  }
+
+  .cofounder-photo-overlay small {
+    opacity: 0.85;
+    font-size: 13px;
+  }
+
+  @media (max-width: 850px) {
+    .cofounder-photo-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .cofounder-photo-card img {
+      height: 360px;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .cofounder-gallery {
+      padding: 0 14px;
+      margin-top: 40px;
+    }
+
+    .cofounder-photo-grid {
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    .cofounder-photo-card img {
+      height: 430px;
+    }
+  }
+</style>
+
+
+<div class="cofounder-gallery">
+
+  <div class="cofounder-gallery-heading">
+
+    <span>Co-Founder • Farm Life</span>
+
+    <h3>Life at Somnath Krishi Farm</h3>
+
+    <p>
+      A glimpse of dedication, farming and the journey behind
+      Somnath Krishi Farm.
+    </p>
+
+  </div>
+
+
+  <div class="cofounder-photo-grid">
+
+    <!-- PHOTO 1 -->
+    <div class="cofounder-photo-card">
+
+      <img
+        src="cofounder-1.jpeg"
+        alt="Co-Founder at Somnath Krishi Farm"
+        loading="lazy"
+      >
+
+      <div class="cofounder-photo-overlay">
+        <strong>At the Farm</strong>
+        <small>Somnath Krishi Farm</small>
+      </div>
+
+    </div>
+
+
+    <!-- PHOTO 2 -->
+    <div class="cofounder-photo-card">
+
+      <img
+        src="cofounder-2.jpeg"
+        alt="Co-Founder in the mango orchard"
+        loading="lazy"
+      >
+
+      <div class="cofounder-photo-overlay">
+        <strong>Among the Orchards</strong>
+        <small>Growing with Nature</small>
+      </div>
+
+    </div>
+
+
+    <!-- PHOTO 3 -->
+    <div class="cofounder-photo-card">
+
+      <img
+        src="cofounder-3.jpeg"
+        alt="Co-Founder inspecting mango trees"
+        loading="lazy"
+      >
+
+      <div class="cofounder-photo-overlay">
+        <strong>Passion for Farming</strong>
+        <small>Hands-on with the Farm</small>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- END CO-FOUNDER PREMIUM PHOTO GALLERY -->
       <div class="founder-tag">🥭 Somnath Krishi Farm · Est. 1995</div>
     </div>
   </div>
